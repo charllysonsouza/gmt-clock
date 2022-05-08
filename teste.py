@@ -16,13 +16,13 @@ x1, y1, x2, y2 = x, y, x, 10
 r1 = 280
 r2 = 230
 in_degree = 0
-romans = iter(['12', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X', 'XI'])
+romans = iter(['XII', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X', 'XI'])
 for i in range(0, 60):
     in_radian = math.radians(in_degree)
     if i % 5 == 0:
         ratio = 0.85
         t1 = x + r2 * math.sin(in_radian)
-        t2 = y + r2 * math.cos(in_radian)
+        t2 = y - r2 * math.cos(in_radian)
         c1.create_text(t1, t2, fill='blue', font='Times 25 bold', text=next(romans))
     else:
         ratio = 0.89
